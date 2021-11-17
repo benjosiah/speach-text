@@ -15,7 +15,7 @@ class DiaryController extends Controller
     public function index()
     {
         //
-        return Task::all();
+        return Diary::all();
     }
 
     /**
@@ -59,7 +59,7 @@ class DiaryController extends Controller
      */
     public function show(Diary $diary)
     {
-        //
+        
     }
 
     /**
