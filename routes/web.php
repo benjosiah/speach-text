@@ -24,4 +24,4 @@ Route::get('/speech', function () {
 })->name('diary.index');
 
 Route::post('/login','App\Http\Controllers\AuthController@login')->name('login');
-Route::post('/diary','App\Http\Controllers\DiaryController@store')->name('speech.store')->middleware('auth');
+Route::post('/diary','App\Http\Controllers\DiaryController@store')->name('speech.store');
