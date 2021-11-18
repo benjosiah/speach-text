@@ -16,19 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/register', function () {
-    return view('register');
-});
 Route::get('/register', function () {
     return view('register');
 });
 Route::get('/speech', function () {
     return view('speech');
-});
-Route::get('/register', function () {
-    return view('register');
-});
-Route::get('/register', function () {
-    return view('register');
-});
+})->name('diary.index');
+
+Route::post('/login','App\Http\Controllers\AuthController@login')->name('login');
+Route::post('/diary','App\Http\Controllers\DiaryController@store')->name('speech.store')->middleware('auth');

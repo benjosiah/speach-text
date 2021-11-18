@@ -1,6 +1,8 @@
 const texts = document.getElementById('texts');
-const button = document.getElementById('play-button');
-let start = false;
+const start = document.getElementById('play-button');
+const stop = document.getElementById('pause-button');
+const save = document.getElementById('save-button');
+
 window.speechRecognition = window.speechRecognition || window.webkitSpeechRecognition;
 
 
@@ -12,6 +14,7 @@ recognition.continuous = true;
 // let p = document.createElement('p');
 
 recognition.addEventListener('result', (e) =>{
+
     const text = Array.from(e.results)
     .map(result => result[0])
     .map(result => result.transcript)
@@ -32,21 +35,34 @@ recognition.addEventListener('result', (e) =>{
     console.log(text);
 })
 
-recognition.addEventListener('end', ()=>{
-    // recognition.start();
+
+start.addEventListener("click", function(e){
+    e.preventDefault
+        recognition.start();
 })
 
-button.addEventListener("click", function(){
-    if(start == false){
-        start = true;
-        recognition.start();
-        button.innerText = "Stop";
-    }else{
-        button.innerText = "Start";
-        start = false;
-        recognition.stop();
-    }
+stop.addEventListener("click", function(e){
+    e.preventDefault
+    recognition.stop();
 })
+
+// save.addEventListener("click", function(){
+//     recognition.stop();
+//     const text = texts.innerText;
+//     // const data = new FormData();
+//     // data.append('text', text);
+//     fetch('/diary', {
+//         method: 'POST',
+//         body: {
+//             note: text,
+//             title: 'note'
+//         }
+//     })
+//     .then(res => res.json())
+//     .then(data => {
+//         console.log(data);
+//     })
+// })
 
 // recognition.start();
 console.log(recognition);

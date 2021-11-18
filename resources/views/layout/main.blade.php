@@ -25,23 +25,27 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" id="center" href="app.html">Home</a>
+                  <a class="nav-link" id="center" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="center" href="#">About us</a>
+                  <a class="nav-link" id="center" href="/#speechtt">About us</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="center" href="#">Features</a>
+                  <a class="nav-link" id="center" href="/">Features</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="center" href="#">Contact</a>
+                  <a class="nav-link" id="center" href="/">Contact</a>
                 </li>
               </ul>
             </div>
     
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a type="button" id="first" class="btn btn-outline-dark" href="login.html">Log in</a></li>
-                <li class="nav-item"><a type="button" id="button" class="btn btn-dark" href="signup.html">Sign Up</a></li>
+              @if (Auth::user())
+                <li class="nav-item"><a type="button" id="button" class="btn btn-dark" href="#">NOTES</a></li>
+              @else
+                <li class="nav-item"><a type="button" id="first" class="btn btn-outline-dark" href="/#login">Log in</a></li>
+                
+              @endif
             </ul>
           </nav>
           <hr>

@@ -37,10 +37,10 @@ class DiaryController extends Controller
     public function store(Request $request)
     {
         //
-        $data=$request->validate([
-            'title'=> 'required|string',
-            'note'=> 'required|string'
-        ]);
+        // $data=$request->validate([
+        //     'title'=> 'required|string',
+        //     'note'=> 'required|string'
+        // ]);
         
 
         $diary= Diary::create([
@@ -48,7 +48,7 @@ class DiaryController extends Controller
             'note'=> $request->note,
             // 'user_id'=> auth()->user()->id,
         ]);
-        return response($diary, 200);
+        return redirect()->back();
     }
 
     /**

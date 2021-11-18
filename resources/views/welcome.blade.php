@@ -1,65 +1,66 @@
 @extends('layout.main')
 @section('content')
 <div class="container">
-<div class="row">
-    <div class="col">
-    <div class="text">
-        <h1>Easy to Use Speech <br>
-            Assistance</h1> 
-            <p>lorem ipsun is a per sondhkljd jsgdfijisguhdhkndjj ksjhgidihshnk<br>sjdkjdkhvhvbslf
-            sbdfbjsvjfnldknfhvs <br>dfbdjbjvshdjhdkfjgavcjdkdlckjsgcvdhdbjkddgcvjhlfhg fye <br>shfdd
-        djfnlfjdbkjmd hdknmdvk<br>djnlfdjhhlfkjg</p>
-        <a type="button" class="btn btn-dark"  id="button-get" href="login.html">Get Started Now!</a>  
-        </div> 
-    </div>
-
-
+    <div class="row">
         <div class="col">
-            <div  id="pix" class="image">
-                <img src="images/Artboard 1 1.png">
+            <div class="text">
+                <h1>Easy to Use Speech <br>
+                    Assistance</h1> 
+                    <p>lorem ipsun is a per sondhkljd jsgdfijisguhdhkndjj ksjhgidihshnk<br>sjdkjdkhvhvbslf
+                    sbdfbjsvjfnldknfhvs <br>dfbdjbjvshdjhdkfjgavcjdkdlckjsgcvdhdbjkddgcvjhlfhg fye <br>shfdd
+                djfnlfjdbkjmd hdknmdvk<br>djnlfdjhhlfkjg</p>
+                <a type="button" class="btn btn-dark"  id="button-get" href="register">Get Started Now!</a>  
+                </div> 
+            </div>
+
+
+            <div class="col">
+                <div  id="pix" class="image">
+                    <img src="images/Artboard 1 1.png">
+                </div>
             </div>
         </div>
-    </div>
     </div>
 
 
     <div id="speechtt">
 
-    <h1 class="keep">
-        Keep Track Of Your Notes
-    </h1>
-    <h4>
-        Take notes of your work now made easy with speechify
-    </h4>
+        <h1 class="keep">
+            Keep Track Of Your Notes
+        </h1>
+        <h4>
+            Take notes of your work now made easy with speechify
+        </h4>
 
-        <div class="row">
+        <div class="row" id='about'>
             <div class="col" id="first-box">
                 <img src="images/Group 10.png">
                 <h3>Convert Speech to Text</h3>
                 <hr>
                 <p>lorem ipsum the ma  who said thta he could fo things mn cant was right<br>
-            bfkdngjnkf dfjjnkfgdhblkjfjfnglfknkfj fkgnlfkn<br>jfjgknkjdfkd jdglknkfglfg
-        dfkjdngkjfkjf fgnkjfkjdhd jdhknjnd<br>fhdjhsf jdhknkjhdkkn</p>
+                 bfkdngjnkf dfjjnkfgdhblkjfjfnglfknkfj fkgnlfkn<br>jfjgknkjdfkd jdglknkfglfg
+                 dfkjdngkjfkjf fgnkjfkjdhd jdhknjnd<br>fhdjhsf jdhknkjhdkkn</p>
             </div>
                 
-                <div class="col" id="second-box">
-                    <img src="images/Group 11.png">
-                    <h3>Convert Text to Speech</h3>
-                    <hr>
-                    <p>lorem ipsum the ma  who said thta he could fo things mn cant was right<br>
-                        bfkdngjnkf dfjjnkfgdhblkjfjfnglfknkfj fkgnlfkn<br>jfjgknkjdfkd jdglknkfglfg
-                    dfkjdngkjfkjf fgnkjfkjdhd jdhknjnd<br>fhdjhsf jdhknkjhdkkn</p>
-                
+            <div class="col" id="second-box">
+                <img src="images/Group 11.png">
+                <h3>Convert Text to Speech</h3>
+                <hr>
+                <p>lorem ipsum the ma  who said thta he could fo things mn cant was right<br>
+                    bfkdngjnkf dfjjnkfgdhblkjfjfnglfknkfj fkgnlfkn<br>jfjgknkjdfkd jdglknkfglfg
+                dfkjdngkjfkjf fgnkjfkjdhd jdhknjnd<br>fhdjhsf jdhknkjhdkkn</p>
+            
+            </div>
         </div>
-        </div>
-        </div>
+    </div>
         
-            <div id="login">
+    <div id="login">
         <div class="container">
             <div class="row">
                 <div class="col" id="log-first">
             <h1 class="log">Log in</h1>
-            <form>
+            <form method="post" action="{{route('login')}}" >
+                @csrf
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">E-mail</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-mail" name="email" id="email" required>
@@ -77,7 +78,7 @@
             </div>
         </div>
         </div>
-        </div>
+    </div>
 
         <div id="footer">
             <div class="container">
@@ -145,5 +146,5 @@
                 </div>
             </div>
         </div>  
-        </div>  
+    </div>  
 @endsection
