@@ -1,9 +1,9 @@
 
        @extends('layout.main')
        @section('style')
-       <link rel="stylesheet" type="text/css" href="{{secure_asset('css/speechify.css')}}">
+      
         <!-- <link rel="stylesheet" type="text/css" href="{{asset('bootstrap.css')}}"> -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
        @endsection
         @section('content')
     
@@ -36,6 +36,6 @@
             </div>
     
         </div>
-        <script src="{{secure_asset('js/speech.js')}}"></script>
+        <script src="{{asset('js/speech.js')}}"></script>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 @endsection
