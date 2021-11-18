@@ -26,8 +26,8 @@
                     <div class="control">
                         @csrf 
                         <input type="hidden" name="title" value='Note'>
-                        <button type="button" id="play-button" class="btn btn-primary">Play</button>
-                        <button type="button" id="pause-button" class="btn btn-danger">Pause</button>
+                        <button type="button" id="play-button" class="btn btn-primary">Start</button>
+                        <button type="button" id="pause-button" class="btn btn-danger">Stop</button>
                         <button type="submit" id="save-button" class="btn btn-success">save</button>
                     </div>
                 </form>
@@ -36,6 +36,6 @@
             </div>
     
         </div>
-        <script src="{{secure_asset('js/speech.js')}}"></script>
+        <script src="{{asset('js/speech.js')}}"></script>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 @endsection

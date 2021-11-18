@@ -21,7 +21,8 @@ Route::get('/register', function () {
 });
 Route::get('/speech', function () {
     return view('speech');
-})->name('diary.index');
+})->name('speech');
 
 Route::post('/login','App\Http\Controllers\AuthController@login')->name('login');
 Route::post('/diary','App\Http\Controllers\DiaryController@store')->name('speech.store');
+Route::get('/notes','App\Http\Controllers\DiaryController@index')->name('diary.index');
