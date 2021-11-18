@@ -36,6 +36,6 @@
             </div>
     
         </div>
-        <script src="{{asset('js/speech.js')}}"></script>
+        <script src="{{secure_asset('js/speech.js')}}"></script>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 @endsection
