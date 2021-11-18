@@ -55,11 +55,11 @@
     </div>
         
     <div id="login">
+    <form method="POST" action="{{route('login')}}" >
         <div class="container">
             <div class="row">
                 <div class="col" id="log-first">
             <h1 class="log">Log in</h1>
-            <form method="post" action="{{route('login')}}" >
                 @csrf
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">E-mail</label>
@@ -71,13 +71,14 @@
                     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password" id="password" required>
                 </div>
                 <button type="submit" id="buttontwo">Log in</button>
-                </form>
+              
             </div>
             <div class="col" id="log-second">
                 <img src="images/image 1 (1).png">
             </div>
         </div>
         </div>
+    </form>
     </div>
 
         <div id="footer">
